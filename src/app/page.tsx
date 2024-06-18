@@ -1,5 +1,7 @@
+import { Icons } from "@/components/Icons";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { Phone } from "@/components/Phone";
+import { Reviews } from "@/components/Reviews";
 import { Check, Star } from "lucide-react";
 import Image from "next/image";
 
@@ -66,6 +68,72 @@ export default function Home() {
             </div>
           </div>
          </MaxWidthWrapper>
+      </section>
+
+    {/** Valor del negocio  */}
+      <section className="bg-slate-100 py-24">
+      <MaxWidthWrapper className="flex flex-col items-center gap-16 sm:gap-32">
+        <div className="flex flex-col lg:flex-row items-center gap-4 sm:gap-6">
+          <h2 className="order-1 mt-2 tracking-tight text-center text-abalance !leading-tight font-bold text-5xl md:text-6xl text-gray-900">Que dicen nuestros <span className="relative px-2">clientes <Icons.underline className='hidden sm:block pointer-events-none absolute inset-x-0 -bottom-4 text-blue-600'/>  </span> </h2>
+          <img src="/snake-2.png" alt="snake" className="w-24 order-0 lg:order-2" />
+        </div>
+        <div className="mx-auto grid max-w-2xl grid-cols-1 px-4 lg:mx-0 lg:max-w-none lg:grid-cols-2 gap-y-16">
+          <div className="flex flex-auto flex-col gap-4 lg:pr-8 xl:pr-20 ">
+            <div className="flex gap-0.5 mb-2">
+                <Star className="h-5 w-5 text-blue-600 fill-blue-600" />
+                <Star className="h-5 w-5 text-blue-600 fill-blue-600" />
+                <Star className="h-5 w-5 text-blue-600 fill-blue-600" />
+                <Star className="h-5 w-5 text-blue-600 fill-blue-600" />
+                <Star className="h-5 w-5 text-blue-600 fill-blue-600" />
+            </div>
+            <div className="text-lg leading-8">
+              <p>
+                "El estuche se siente duradero y me han dicho que está muy bonito. Tuve el estuche durante dos meses  y <span className="p-0.5 bg-slate-800 text-white">la imagen es súper clara.</span>  El estuche que tenía antes, la imagen comenzó a desvanecerse en un color amarillento después de un par de semanas. Me encanta este estuche."
+              </p>
+            </div>
+            <div className="flex gap-4 mt-2">
+              <img src="/users/user-1.png" alt="user" className="rounded-full h-12 -w-12 object-cover" />
+              <div className="flex flex-col">
+                <p className="font-semibold">Jonathan</p>
+                <div className="flex gap-1.5 items-center text-zinc-600">
+                  <Check className="h-4 w-4 stronke-[3px] text-blue-600"  />
+                  <p className="text-sm">Compra Verficada</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/** second user review */}
+
+          <div className="flex flex-auto flex-col gap-4 lg:pr-8 xl:pr-20 ">
+            <div className="flex gap-0.5 mb-2">
+                <Star className="h-5 w-5 text-blue-600 fill-blue-600" />
+                <Star className="h-5 w-5 text-blue-600 fill-blue-600" />
+                <Star className="h-5 w-5 text-blue-600 fill-blue-600" />
+                <Star className="h-5 w-5 text-blue-600 fill-blue-600" />
+                <Star className="h-5 w-5 text-blue-600 fill-blue-600" />
+            </div>
+            <div className="text-lg leading-8">
+              <p>
+                "Por lo general, guardo mi celular en el bolsillo con mis llaves, lo que provocaba rayones en mis estuches. Este, además de un rasguño apenas perceptible en la esquina,<span className="p-0.5 bg-slate-800 text-white"> parece nuevo después de aproximadamente medio año.</span> Me encanta."
+              </p>
+            </div>
+            <div className="flex gap-4 mt-2">
+              <img src="/users/user-4.jpg" alt="user" className="rounded-full h-12 -w-12 object-cover" />
+              <div className="flex flex-col">
+                <p className="font-semibold">Carlos</p>
+                <div className="flex gap-1.5 items-center text-zinc-600">
+                  <Check className="h-4 w-4 stronke-[3px] text-blue-600"  />
+                  <p className="text-sm">Compra Verficada</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </MaxWidthWrapper>
+      <div className="pt-16">
+          <Reviews />
+      </div>
       </section>
     </div>
   );

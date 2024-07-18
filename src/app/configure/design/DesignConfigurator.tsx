@@ -26,12 +26,12 @@ export const DesignConfigurator = ({configId, imageUrl, imageDimensions}: Design
     <div className="relative mt-20 grid grid-cols-3 mb-20 pb-20">
         <div className="relative h[37.5rem] overflow-hidden col-span-2 w-full max-w-4xl flex items-center justify-center rounded-lg border-2 border-dashed border-gray-300 p-12 text-center focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
             <div className="relative w-60 bg-opacity-50 pointer-events-none aspect-[896/1831]">
-                <AspectRatio ratio={891 / 1831} className="pointer-events-none relative z-50 aspect-[896/1831] w-full ">
+                <AspectRatio ratio={896 / 1831} className="pointer-events-none relative z-50 aspect-[896/1831] w-full ">
                     <NextImage fill alt='phone image' src="/phone-template.png" className='pointer-events-none z-50 select-none '/>
                 </AspectRatio>
                 <div className="absolute z-40 inset-0 left-[3px] top-px-right-[3px] bottom-px rounded-[32px] shadow-[0_0_0_99999px_rgba(229, 231, 235, 0.6)] "/>
               <div className={cn("absolute inset-0 left-[3px] top-px right-[3px] bottom-px rounded-[32px]",
-              'bg-zinc-950'
+              `bg-${options.color.tw}`
               )}/>
             </div>
             <Rnd default={ {
@@ -79,11 +79,11 @@ export const DesignConfigurator = ({configId, imageUrl, imageDimensions}: Design
                                     {COLORS.map((color) =>(
                                         <RadioGroup.Option key={color.label} value={color}
                                         className={({active, checked}) => 
-                                            cn("relative -m-0.5 flex cursor-pointer items center justify-center rounded-full p-0.5 active:ring-0 focus:ring-0 active:outline-none focus:outline-none border-2 border-transparent", {
+                                            cn("relative -m-0.5 flex cursor-pointer items-center justify-center rounded-full p-0.5 active:ring-0 focus:ring-0 active:outline-none focus:outline-none border-2 border-transparent", {
                                             [`border-${color.tw}`]: active || checked
                                         })}
                                         >
-                                            <span className={cn(`bg-${color.tw}`, "h-8 rounded-full border border-black border-opacity-10" )}/>
+                                            <span className={cn(`bg-${color.tw}`, "h-8 w-8 rounded-full border border-black border-opacity-10" )}/>
                                         </RadioGroup.Option>
                                     ))}
                                 </div>

@@ -32,7 +32,7 @@ export const DesignPreview = ({configuration}: {configuration: Configuration} ) 
 
         <div className='mt-6 sm:col-span-9 sm:mt-0 md:row-end-1'>
             <h3 className='text-3xl font-bold tracking-tight text-gray-900'>
-                Tu estuche de {modelLabel}
+                Tu estuche de   {modelLabel}
             </h3>
         </div>
     </div>
